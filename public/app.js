@@ -37,7 +37,7 @@
   }
 
   UnicornFactoryFarm.$inject = ["$resource"];
-  function UnicornFactoryFarm($resource){
+  function UnicornFactoryFarm ($resource) {
     var SpecialMagicalUnicornRainbowGlitterConveyorBeltLisaFrank = $resource("/api/unicorns/:name", {}, {
       update: {method: "PUT"}
     });
@@ -50,8 +50,8 @@
     vm.unicorns = Unicorn.query();
 
     vm.unigenesis = function(){
-      Unicorn.save(vm.babyUnicorn, function(tiny_corn){
-        vm.unicorns.push(tiny_corn);
+      Unicorn.save(vm.babyUnicorn, function(tinyCorn){
+        vm.unicorns.push(tinyCorn);
       });
     };
   }

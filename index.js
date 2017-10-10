@@ -32,7 +32,7 @@ app.get("/api/unicorns", function(req, res){
 });
 
 app.post("/api/unicorns", function(req,res){
-  Unicorn.create().req.body.then(function(unicorn_baby){
+  Unicorn.create(req.body).then(function(unicorn_baby){
     res.json(unicorn_baby);
   });
 });
